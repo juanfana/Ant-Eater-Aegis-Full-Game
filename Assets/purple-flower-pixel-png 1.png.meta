@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      purple-flower-pixel-png 1_0: 8718251617882423483
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

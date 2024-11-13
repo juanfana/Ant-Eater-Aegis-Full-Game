@@ -14,8 +14,8 @@ public class EnemieAIMovement : MonoBehaviour
 void Start()
 {
     //Two floats created to serve as parameters for a vector2
-        x = Random.Range (0f,70.0f);
-        y = Random.Range (0.0f,100.0f);
+        x = Random.Range (-70.0f ,70.0f);
+        y = Random.Range (-100.0f,100.0f);
    //Vector2 created to give the ants direction to follow 
         Flower = new Vector2(x, y);
         position = gameObject.transform.position;

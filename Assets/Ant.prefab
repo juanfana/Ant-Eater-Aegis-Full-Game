@@ -176,13 +176,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218906852086311731}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2550a7e33b4f5ab4bb8ebc683a535457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isTriggered: 0
   Polygon: {fileID: 3220543930586874561}
+  pressedEatKey: 0
+  bug: {fileID: 0}
 --- !u!114 &-6429242092004059284
 MonoBehaviour:
   m_ObjectHideFlags: 0
