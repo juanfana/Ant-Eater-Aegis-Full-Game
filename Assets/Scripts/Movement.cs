@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Movement : MonoBehaviour
@@ -8,6 +9,7 @@ public class Movement : MonoBehaviour
     public float MovementSpeed;
     // Floats that serve as parameters for the Vector2 being used 
     float speedX, speedY;
+    private bool TurnAround = true;
     //rigidbody that will be apllied to sprite
     Rigidbody2D Rb;    
 
@@ -28,5 +30,20 @@ public class Movement : MonoBehaviour
     //Normalizing the vector using .normalized will help keep calculations more accurately in check when moving the character around 
         Rb.linearVelocity = new Vector2(speedX, speedY).normalized *MovementSpeed;
         
+        if(Input.GetKeyDown(KeyCode.D) && TurnAround)
+        {
+            Flip();
+        }
+        else if (Input.GetKeyDown(KeyCode.A) && !TurnAround)
+        {
+            Flip();
+        }
     }
+
+    void Flip ()
+    {
+        TurnAround = !TurnAround;
+        transform.Rotate(0f,180f,0f);
+    }
+    
 }
