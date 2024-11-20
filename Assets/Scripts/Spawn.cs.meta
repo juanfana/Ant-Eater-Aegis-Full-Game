@@ -1,2 +1,15 @@
 fileFormatVersion: 2
 guid: bc71d0297015cef49a04e2944b4d3daa
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Ant: {fileID: 1218906852086311731, guid: 685162dcb09742f4d951287ca72b910c, type: 3}
+  - Worm: {fileID: 1218906852086311731, guid: f43f027b6668ee5498a778d84719de29, type: 3}
+  - Spider: {fileID: 1218906852086311731, guid: 46a747df93d2e914687849e6b876a0de, type: 3}
+  - SpawnPosition: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

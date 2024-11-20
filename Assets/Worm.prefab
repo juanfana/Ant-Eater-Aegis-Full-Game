@@ -10,12 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 83903242518652015}
   - component: {fileID: 3931791437009932264}
+  - component: {fileID: 3220543930586874561}
   - component: {fileID: 8372814207953190472}
   - component: {fileID: -6429242092004059284}
-  - component: {fileID: 8379519850900615505}
   m_Layer: 0
-  m_Name: Ant
-  m_TagString: Ant
+  m_Name: Worm
+  m_TagString: Worm
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.21, y: 3.8, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.28914353, z: 0.45235226}
+  m_LocalScale: {x: 0.2, y: 0.19276236, z: 0.30156815}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6143993589124752461, guid: 15d62f9b6dc33064a85a364cfeccdadf, type: 3}
+  m_Sprite: {fileID: 8427689247956282849, guid: 75e2f228289998641a82502ceecc26c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,6 +90,67 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!60 &3220543930586874561
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218906852086311731}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 6.04, y: 1.24}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 3, y: -0.45}
+      - {x: 3.02, y: -0.41}
+      - {x: 3.02, y: 0.22}
+      - {x: 2.86, y: 0.41}
+      - {x: 2.76, y: 0.55}
+      - {x: 2.61, y: 0.62}
+      - {x: -1.99, y: 0.62}
+      - {x: -2.59, y: 0.59999996}
+      - {x: -2.74, y: 0.58}
+      - {x: -2.8999999, y: 0.41}
+      - {x: -3.02, y: 0.17999999}
+      - {x: -3.02, y: -0.47}
+      - {x: -2.84, y: -0.62}
+      - {x: 2.83, y: -0.62}
+  m_UseDelaunayMesh: 0
 --- !u!50 &8372814207953190472
 Rigidbody2D:
   serializedVersion: 5
@@ -132,86 +193,3 @@ MonoBehaviour:
   speed: 1
   OutsideFenceFlowers: []
   target: {x: 0, y: 0}
---- !u!60 &8379519850900615505
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1218906852086311731}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 4.88, y: 2.56}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: -0.51, y: -0.29}
-      - {x: -0.089999996, y: -0.98999995}
-      - {x: 0.39999998, y: -1.28}
-      - {x: 0.64, y: -1.28}
-      - {x: 0.62, y: -1.18}
-      - {x: 0.16, y: -0.76}
-      - {x: 0.22999999, y: -0.32999998}
-      - {x: 0.7, y: -0.90999997}
-      - {x: 1.35, y: -1.28}
-      - {x: 1.38, y: -1.28}
-      - {x: 1.53, y: -1.17}
-      - {x: 0.75, y: -0.35}
-      - {x: 1.9699999, y: -0.14999999}
-      - {x: 2.44, y: 0.13}
-      - {x: 2.44, y: 0.38}
-      - {x: 2.34, y: 0.64}
-      - {x: 1.87, y: 0.90999997}
-      - {x: 0.94, y: 0.57}
-      - {x: 0.57, y: 0.32999998}
-      - {x: -0.78, y: 0.39}
-      - {x: -1.49, y: 1.28}
-      - {x: -1.75, y: 1.28}
-      - {x: -2.12, y: 0.94}
-      - {x: -1.9399999, y: 0.53999996}
-      - {x: -2.1399999, y: 0.28}
-      - {x: -2.3899999, y: -0.089999996}
-      - {x: -2.4099998, y: -0.22}
-      - {x: -2.3799999, y: -0.25}
-      - {x: -2.44, y: -0.26}
-      - {x: -2.44, y: -0.45}
-      - {x: -2.09, y: -0.53999996}
-      - {x: -1.64, y: -0.53999996}
-      - {x: -0.84, y: -0.32999998}
-      - {x: -1.05, y: -0.58}
-      - {x: -1.11, y: -1.28}
-      - {x: -0.94, y: -1.28}
-  m_UseDelaunayMesh: 0

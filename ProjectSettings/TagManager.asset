@@ -5,6 +5,12 @@ TagManager:
   serializedVersion: 3
   tags:
   - Ant
+  - OutsideFenceFlowers
+  - WormSpawnPositions
+  - Worm
+  - Spider
+  - Bug Spray
+  - Anteater
   layers:
   - Default
   - TransparentFX

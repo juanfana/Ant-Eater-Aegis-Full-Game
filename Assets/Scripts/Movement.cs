@@ -9,7 +9,7 @@ public class Movement : MonoBehaviour
     public float MovementSpeed;
     // Floats that serve as parameters for the Vector2 being used 
     float speedX, speedY;
-    private bool TurnAround = true;
+    public bool TurnAround = true;
     //rigidbody that will be apllied to sprite
     Rigidbody2D Rb;    
 
@@ -25,22 +25,22 @@ public class Movement : MonoBehaviour
     {
     //this could have also been done with if statements and maybe while statements but this was a quick simple way of implementing
      //Axis serves as maps for the movement keys, can be altered going to EDIT/PROJECT SETTINGS/.
-        speedX = Input.GetAxis("Horizontal") *MovementSpeed;
-        speedY = Input.GetAxis("Vertical")*MovementSpeed;
+        speedX = Input.GetAxis("Horizontal") * MovementSpeed;
+        speedY = Input.GetAxis("Vertical") * MovementSpeed;
     //Normalizing the vector using .normalized will help keep calculations more accurately in check when moving the character around 
-        Rb.linearVelocity = new Vector2(speedX, speedY).normalized *MovementSpeed;
+        Rb.linearVelocity = new Vector2(speedX, speedY).normalized * MovementSpeed;
         
-        if(Input.GetKeyDown(KeyCode.D) && TurnAround)
+        if ( (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow) ) && TurnAround)
         {
             Flip();
         }
-        else if (Input.GetKeyDown(KeyCode.A) && !TurnAround)
+        else if ( (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow) ) && !TurnAround)
         {
             Flip();
         }
     }
 
-    void Flip ()
+    void Flip()
     {
         TurnAround = !TurnAround;
         transform.Rotate(0f,180f,0f);
