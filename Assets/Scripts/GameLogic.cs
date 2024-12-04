@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameLogic : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class GameLogic : MonoBehaviour
         // If the flowers are gone, then the application is closed.
         if(Health <= 0)
         {
-            Application.Quit();
+            SceneManager.LoadScene("Game Over");
         }
     }
 
