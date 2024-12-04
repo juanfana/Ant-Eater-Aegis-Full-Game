@@ -98,7 +98,7 @@ public class Spawn : MonoBehaviour
         timeUntilBugSpraySpawn -= Time.deltaTime;
         if (timeUntilBugSpraySpawn <= 0)
         {
-            Instantiate(BugSpray, BugSprayPositions[Random.Range(0, BugSprayPositions.Length - 1)].position, Quaternion.identity);
+            Instantiate(BugSpray, BugSprayPositions[Random.Range(0, BugSprayPositions.Length)].position, Quaternion.identity);
             SetTimeUntilBugSpraySpawn();
         }
 

@@ -6645,6 +6645,7 @@ MonoBehaviour:
   gameLogic: {fileID: 694156010}
   toungeSprite: {fileID: -205893088357726817, guid: 45b6ecb1d4e319a4697d752b42628c78, type: 3}
   normalSprite: {fileID: 1827083876702484894, guid: 0797ea35af49bc34e8aca9728d9f02dc, type: 3}
+  missSprite: {fileID: -2777800097951584034, guid: 360007c952cc1174a859533bd7ab7746, type: 3}
 --- !u!1 &884030739
 GameObject:
   m_ObjectHideFlags: 0
@@ -16880,7 +16881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4805515328594058040, guid: d98267eddf50f894fbf82edcdb8c81a1, type: 3}
       propertyPath: SpiderMaxLifetime
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4805515328594058040, guid: d98267eddf50f894fbf82edcdb8c81a1, type: 3}
       propertyPath: timeUntilSpiderSpawn

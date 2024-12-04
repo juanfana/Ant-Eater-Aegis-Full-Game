@@ -29,6 +29,8 @@ public class Action : MonoBehaviour
 
     public Sprite normalSprite;
 
+    public Sprite missSprite;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created.
     public void Start()
     {
@@ -63,6 +65,7 @@ public class Action : MonoBehaviour
         // If we aren't on cooldown
         if (isEatKeyOnCooldown == false)
         {
+
             // The bug we're eating is an ant, worm or spider
             if (bug.tag == "Ant" || bug.tag == "Worm" || bug.tag == "Spider")
             {
@@ -84,6 +87,14 @@ public class Action : MonoBehaviour
     }
     void Update()
     {
+
+        if (Input.GetKeyDown(KeyCode.Space) && isTouchingBug == false)
+        {
+            // Try to eat.
+            GetComponent<SpriteRenderer>().sprite = toungeSprite;
+        }
+
+
         // If the player presses Space and they are touching a bug.
         if (Input.GetKeyDown(KeyCode.Space) && isTouchingBug == true)
         {
@@ -111,6 +122,8 @@ public class Action : MonoBehaviour
         }
 
     }
+
+
 
     void OnTriggerEnter2D(Collider2D Polygon)
     {
