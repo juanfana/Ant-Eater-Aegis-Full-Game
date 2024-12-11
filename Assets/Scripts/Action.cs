@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine.Rendering;
+using TMPro;
 
 public class Action : MonoBehaviour
 {
@@ -31,6 +32,9 @@ public class Action : MonoBehaviour
 
     public Sprite missSprite;
 
+    public int eatPoints = 1;
+    public int sprayPoints = 5;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created.
     public void Start()
     {
@@ -58,6 +62,8 @@ public class Action : MonoBehaviour
             // Destroy each spider game object
             Destroy(spider.gameObject);
         }
+
+        gameLogic.GetComponent<GameLogic>().AddScore(sprayPoints);
     }
 
     public void TryEat()
@@ -74,6 +80,11 @@ public class Action : MonoBehaviour
                 {
                     // Hurt the player
                     gameLogic.GetComponent<GameLogic>().TakeDamage();
+                    gameLogic.GetComponent<GameLogic>().AddScore(-eatPoints);
+                }
+                else
+                {
+                    gameLogic.GetComponent<GameLogic>().AddScore(eatPoints);
                 }
 
                 // Destroy the game object, 'eating' it.
@@ -87,13 +98,11 @@ public class Action : MonoBehaviour
     }
     void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Space) && isTouchingBug == false)
         {
             // Try to eat.
             GetComponent<SpriteRenderer>().sprite = toungeSprite;
         }
-
 
         // If the player presses Space and they are touching a bug.
         if (Input.GetKeyDown(KeyCode.Space) && isTouchingBug == true)

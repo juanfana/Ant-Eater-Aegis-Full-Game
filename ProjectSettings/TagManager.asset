@@ -11,6 +11,7 @@ TagManager:
   - Spider
   - Bug Spray
   - Anteater
+  - Score
   layers:
   - Default
   - TransparentFX

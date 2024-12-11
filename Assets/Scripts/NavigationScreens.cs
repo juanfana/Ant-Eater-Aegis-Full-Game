@@ -7,9 +7,6 @@ public class NavigationScreens : MonoBehaviour
 
     public void OnStartClick()
     {
-
-
         SceneManager.LoadScene(SceneName);
     }
-
 }
