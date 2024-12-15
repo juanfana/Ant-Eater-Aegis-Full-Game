@@ -71,24 +71,26 @@ public class Action : MonoBehaviour
         // If we aren't on cooldown
         if (isEatKeyOnCooldown == false)
         {
-
-            // The bug we're eating is an ant, worm or spider
-            if (bug.tag == "Ant" || bug.tag == "Worm" || bug.tag == "Spider")
+            if (bug != null)
             {
-                // If we're eating a spider
-                if (bug.tag == "Spider")
+                // The bug we're eating is an ant, worm or spider
+                if (bug.tag == "Ant" || bug.tag == "Worm" || bug.tag == "Spider")
                 {
-                    // Hurt the player
-                    gameLogic.GetComponent<GameLogic>().TakeDamage();
-                    gameLogic.GetComponent<GameLogic>().AddScore(-eatPoints);
-                }
-                else
-                {
-                    gameLogic.GetComponent<GameLogic>().AddScore(eatPoints);
-                }
+                    // If we're eating a spider
+                    if (bug.tag == "Spider")
+                    {
+                        // Hurt the player
+                        gameLogic.GetComponent<GameLogic>().TakeDamage();
+                        gameLogic.GetComponent<GameLogic>().AddScore(-eatPoints);
+                    }
+                    else
+                    {
+                        gameLogic.GetComponent<GameLogic>().AddScore(eatPoints);
+                    }
 
-                // Destroy the game object, 'eating' it.
-                Destroy(bug.gameObject);
+                    // Destroy the game object, 'eating' it.
+                    Destroy(bug.gameObject);
+                }
             }
 
             // We are now on cooldown, save last time eaten.
@@ -98,10 +100,25 @@ public class Action : MonoBehaviour
     }
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isTouchingBug == false)
+
+        // If the eat key is on cooldown, then we display the tounge sprite.
+        if (isEatKeyOnCooldown == true)
         {
-            // Try to eat.
             GetComponent<SpriteRenderer>().sprite = toungeSprite;
+        }
+        // If not, we will display the anteater's usual sprite.
+        else
+        {
+            GetComponent<SpriteRenderer>().sprite = normalSprite;
+        }
+
+        if (Input.GetKey(KeyCode.Space))
+        {
+
+            GetComponent<SpriteRenderer>().sprite = toungeSprite;
+            // Try to eat.
+            if (isTouchingBug == false)
+                GetComponent<SpriteRenderer>().sprite = missSprite;
         }
 
         // If the player presses Space and they are touching a bug.
@@ -118,23 +135,12 @@ public class Action : MonoBehaviour
             isEatKeyOnCooldown = false;
         }
 
-        // If the eat key is on cooldown, then we display the tounge sprite.
-        if (isEatKeyOnCooldown == true)
-        {
-            GetComponent<SpriteRenderer>().sprite = toungeSprite;
-        }
-
-        // If not, we will display the anteater's usual sprite.
-        else
-        {
-            GetComponent<SpriteRenderer>().sprite = normalSprite;
-        }
 
     }
 
 
 
-    void OnTriggerEnter2D(Collider2D Polygon)
+    void OnTriggerStay2D(Collider2D Polygon)
     {
         // If we are the anteater and the colliding object is the bug spray
         if (gameObject.tag == "Anteater" && Polygon.gameObject.tag == "Bug Spray")
@@ -150,7 +156,7 @@ public class Action : MonoBehaviour
         bug = Polygon.gameObject;
 
         // If we're touching an ant, worm or spider
-        if (gameObject.tag == "Anteater")
+        if (gameObject.tag == "Anteater" && bug != null)
         {
             if (bug.tag == "Ant" || bug.tag == "Worm" || bug.tag == "Spider")
             {
@@ -176,5 +182,6 @@ public class Action : MonoBehaviour
         }
     }
 }
+
 
 
