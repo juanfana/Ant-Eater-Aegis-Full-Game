@@ -16,9 +16,16 @@ public class GameLogic : MonoBehaviour
     public Sprite[] LifeFlowerSprites = new Sprite[6];
     public GameObject LifeFlower;
 
+    public AudioClip PetalHit;
+
+    AudioSource Source;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+
+        Source = GetComponent<AudioSource>();
+
         Health = MaxHealth;
         Score = 0;
         SaveData.score = Score;
@@ -49,6 +56,8 @@ public class GameLogic : MonoBehaviour
                 // This is to take away one health, and change the sprite state afterward.
                 Health -= 1;
                 LifeFlower.GetComponent<SpriteRenderer>().sprite = currentHealthSprite;
+
+                Source.PlayOneShot(PetalHit, 0.7f);
             }
         }
     }

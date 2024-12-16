@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: a12674c3bad13814fbdc45b180ef95d2
+guid: 28c5cc8ef10d0ba4f9cc4b43c559d222
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1142099001982487784
-    second: AnteaterMenu_0
+      213: -4679795457572684923
+    second: AntAninationFINAL_0
+  - first:
+      213: 1420236452607677988
+    second: AntAninationFINAL_1
+  - first:
+      213: 913228900078098999
+    second: AntAninationFINAL_2
+  - first:
+      213: -7736574485016529472
+    second: AntAninationFINAL_3
+  - first:
+      213: 208561394057262028
+    second: AntAninationFINAL_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +138,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: AnteaterMenu_0
+      name: AntAninationFINAL_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 277
+        y: 1937
+        width: 245
+        height: 127
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +153,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 813718042037620f0800000000000000
-      internalID: -1142099001982487784
+      spriteID: 58bb4e173d60e0fb0800000000000000
+      internalID: -4679795457572684923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AntAninationFINAL_1
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1939
+        width: 245
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 426ddb66781b5b310800000000000000
+      internalID: 1420236452607677988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AntAninationFINAL_2
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 1137
+        width: 245
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a96cb98d07cac00800000000000000
+      internalID: 913228900078098999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AntAninationFINAL_3
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 1137
+        width: 245
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c53d3afe7a22a490800000000000000
+      internalID: -7736574485016529472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: AntAninationFINAL_4
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 337
+        width: 245
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3b4ae9b75f4e200800000000000000
+      internalID: 208561394057262028
       vertices: []
       indices: 
       edges: []
@@ -161,7 +261,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      AnteaterMenu_0: -1142099001982487784
+      AntAninationFINAL_0: -4679795457572684923
+      AntAninationFINAL_1: 1420236452607677988
+      AntAninationFINAL_2: 913228900078098999
+      AntAninationFINAL_3: -7736574485016529472
+      AntAninationFINAL_4: 208561394057262028
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

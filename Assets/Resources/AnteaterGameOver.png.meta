@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      AnteaterGameOver_0: -4651963671301233017
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

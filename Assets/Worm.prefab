@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3220543930586874561}
   - component: {fileID: 8372814207953190472}
   - component: {fileID: -6429242092004059284}
+  - component: {fileID: -486138202299491142}
   m_Layer: 0
   m_Name: Worm
   m_TagString: Worm
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 4.21, y: 3.8, z: 0}
-  m_LocalScale: {x: 0.2, y: 0.19276236, z: 0.30156815}
+  m_LocalScale: {x: 0.28, y: 0.26986727, z: 0.4221954}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -79,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1673720917768682875, guid: 689926792dc9f9e49a514bcae3bfee5e, type: 3}
+  m_Sprite: {fileID: 2717862138654217750, guid: 5052951a837ce7a4bacd78d40cde75ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -193,3 +194,25 @@ MonoBehaviour:
   speed: 1
   OutsideFenceFlowers: []
   target: {x: 0, y: 0}
+--- !u!95 &-486138202299491142
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218906852086311731}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 40cacf25130da6849b5932a9f23d08c3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

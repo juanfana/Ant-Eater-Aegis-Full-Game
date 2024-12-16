@@ -7,6 +7,10 @@ using TMPro;
 
 public class Action : MonoBehaviour
 {
+    public AudioClip Bite;
+
+    AudioSource Source;
+
     // Is the player touching a bug?
     public bool isTouchingBug = false;
 
@@ -35,10 +39,14 @@ public class Action : MonoBehaviour
     public int eatPoints = 1;
     public int sprayPoints = 5;
 
+
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created.
     public void Start()
     {
         gameLogic = GameObject.Find("GameLogic");
+        Source = GetComponent<AudioSource>();
     }
     public void SprayAllBugs()
     {
@@ -90,6 +98,7 @@ public class Action : MonoBehaviour
 
                     // Destroy the game object, 'eating' it.
                     Destroy(bug.gameObject);
+                    Source.PlayOneShot(Bite, 0.7f);
                 }
             }
 

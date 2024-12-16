@@ -23,12 +23,14 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-    //this could have also been done with if statements and maybe while statements but this was a quick simple way of implementing
-     //Axis serves as maps for the movement keys, can be altered going to EDIT/PROJECT SETTINGS/.
+        //this could have also been done with if statements and maybe while statements but this was a quick simple way of implementing
+        //Axis serves as maps for the movement keys, can be altered going to EDIT/PROJECT SETTINGS/.
         speedX = Input.GetAxisRaw("Horizontal") * MovementSpeed;
         speedY = Input.GetAxisRaw("Vertical") * MovementSpeed;
         //Normalizing the vector using .normalized will help keep calculations more accurately in check when moving the character around 
         Rb.linearVelocity = new Vector2(speedX, speedY).normalized * MovementSpeed * Time.deltaTime;
+        
+
 
         if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow)) && TurnAround)
         {
