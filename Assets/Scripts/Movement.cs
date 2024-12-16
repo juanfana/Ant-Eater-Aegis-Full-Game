@@ -28,7 +28,7 @@ public class Movement : MonoBehaviour
         speedX = Input.GetAxisRaw("Horizontal") * MovementSpeed;
         speedY = Input.GetAxisRaw("Vertical") * MovementSpeed;
         //Normalizing the vector using .normalized will help keep calculations more accurately in check when moving the character around 
-        Rb.linearVelocity = new Vector2(speedX, speedY).normalized * MovementSpeed * Time.deltaTime;
+        Rb.linearVelocity = new Vector2(speedX, speedY).normalized * MovementSpeed;
         
 
 

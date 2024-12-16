@@ -9,6 +9,8 @@ public class Action : MonoBehaviour
 {
     public AudioClip Bite;
 
+    public AudioClip Spray;
+
     AudioSource Source;
 
     // Is the player touching a bug?
@@ -159,6 +161,8 @@ public class Action : MonoBehaviour
 
             // Destroy the bug spray game object
             Destroy(Polygon.gameObject);
+
+            Source.PlayOneShot(Spray, 0.7f);
         }
 
         // Code setting the trigger to true and establishing bug as game object.
